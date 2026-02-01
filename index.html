@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Heat Pump Grant Checker - Get Up To £7,500 | UK Government Scheme</title>
+    <meta name="description" content="Check if you're eligible for the UK Government Boiler Upgrade Scheme. Get up to £7,500 towards your heat pump installation. Free eligibility check in 60 seconds.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;900&family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-gradient"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">🔥 Extended until 2028 - £295M Available</div>
+                <h1 class="hero-title">Could You Get <span class="highlight">£7,500</span> Towards A Heat Pump?</h1>
+                <p class="hero-subtitle">The UK Government Boiler Upgrade Scheme gives eligible homeowners up to £7,500 towards replacing their old gas boiler with an energy-efficient heat pump.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">102,735+</div>
+                        <div class="stat-label">Applications Approved</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">£7,500</div>
+                        <div class="stat-label">Grant Available</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">60 sec</div>
+                        <div class="stat-label">Quick Check</div>
+                    </div>
+                </div>
+                <button class="cta-button" onclick="startQuiz()">Check My Eligibility - Free <span class="arrow">→</span></button>
+                <p class="trust-badge">✓ 100% Free Check ✓ No Obligation ✓ Instant Results</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Heat Pumps Are Taking Over UK Homes</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Slash Your Bills</h3>
+                    <p>Heat pumps are 300% efficient - they generate 3x more heat than the electricity they use. Save up to 50% on heating costs.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌍</div>
+                    <h3>Cut Carbon by 70%</h3>
+                    <p>Reduce your home's carbon emissions by up to 70% compared to gas boilers. Future-proof your heating system.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏡</div>
+                    <h3>Increase Property Value</h3>
+                    <p>Homes with heat pumps have higher EPC ratings and are more attractive to buyers. Add value to your property.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">❄️</div>
+                    <h3>Year-Round Comfort</h3>
+                    <p>Modern heat pumps work efficiently even in -20°C weather and can cool your home in summer too.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Section -->
+    <div class="quiz-section" id="quizSection" style="display: none;">
+        <div class="container">
+            <div class="quiz-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <div class="progress-text" id="progressText">Question 1 of 7</div>
+                
+                <div class="quiz-content" id="quizContent">
+                    <!-- Questions will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="results-section" id="resultsSection" style="display: none;">
+        <div class="container">
+            <div class="results-container">
+                <div class="results-icon" id="resultsIcon">✅</div>
+                <h2 class="results-title" id="resultsTitle">Great News!</h2>
+                <p class="results-message" id="resultsMessage">Based on your answers, you appear to be eligible for the Boiler Upgrade Scheme!</p>
+                
+                <div class="results-grant-box">
+                    <div class="grant-amount">£7,500</div>
+                    <div class="grant-label">Government Grant Available</div>
+                </div>
+
+                <div class="next-steps">
+                    <h3>Get Your Free, No-Obligation Quote</h3>
+                    <p>Connect with MCS-certified installers in your area to get competitive quotes. They'll handle your grant application for you.</p>
+                    
+                    <form class="lead-form" id="leadForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="postcode">Postcode *</label>
+                            <input type="text" id="postcode" name="postcode" required>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <span>I agree to be contacted by MCS-certified installers for quotes and information about heat pump installations. By submitting this form, you agree to our <a href="#" target="_blank">Privacy Policy</a> and <a href="#" target="_blank">Terms of Service</a>.</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Get My Free Quotes <span class="arrow">→</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Section -->
+    <div class="thankyou-section" id="thankYouSection" style="display: none;">
+        <div class="container">
+            <div class="thankyou-container">
+                <div class="thankyou-icon">🎉</div>
+                <h2 class="thankyou-title">Thank You!</h2>
+                <p class="thankyou-message">Your request has been submitted successfully. An MCS-certified installer will contact you within 24-48 hours to discuss your heat pump installation and help you claim your £7,500 grant.</p>
+                
+                <div class="next-steps-info">
+                    <h3>What Happens Next?</h3>
+                    <div class="steps-grid">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h4>Installer Contact</h4>
+                            <p>A certified installer will call you to discuss your requirements</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h4>Home Survey</h4>
+                            <p>They'll arrange a free home survey to assess your property</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h4>Quote & Grant</h4>
+                            <p>Receive your quote with the £7,500 grant already applied</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <h4>Installation</h4>
+                            <p>Professional installation and full aftercare support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How much does a heat pump cost after the grant?</h3>
+                    <p>After the £7,500 grant, most homeowners pay between £3,500-£5,500 for a complete air source heat pump installation, depending on property size and system requirements.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long does the installation take?</h3>
+                    <p>A typical heat pump installation takes 2-3 days. The installer will handle all the paperwork for your grant application.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need to improve my insulation first?</h3>
+                    <p>As of 2025, you no longer need to complete insulation improvements before claiming the grant, though good insulation helps your heat pump work more efficiently.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I get a heat pump if I have radiators?</h3>
+                    <p>Yes! Most modern heat pumps work with existing radiators. In some cases, a few radiators might need upgrading for optimal efficiency.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How much can I save on my bills?</h3>
+                    <p>Typical savings range from £200-£500 per year depending on your current heating system, property size, and energy tariff. Heat pumps are 300% efficient compared to gas boilers at 90%.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are heat pumps noisy?</h3>
+                    <p>Modern heat pumps are very quiet - typically around 40-60 decibels, similar to a modern fridge. They're quieter than most conversations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About This Service</h4>
+                    <p>We connect UK homeowners with MCS-certified heat pump installers to help you access the Government Boiler Upgrade Scheme and reduce your heating costs.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Important Information</h4>
+                    <ul>
+                        <li>Grant availability subject to government funding</li>
+                        <li>Final eligibility determined by installer</li>
+                        <li>Grants available in England and Wales only</li>
+                        <li>Property must have valid EPC</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://www.ofgem.gov.uk/environmental-and-social-schemes/boiler-upgrade-scheme-bus" target="_blank">Official Ofgem BUS Page</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Heat Pump Grant Checker. All rights reserved. This is an independent referral service and not affiliated with the UK Government.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
