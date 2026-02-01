@@ -1,0 +1,26 @@
+{
+  "name": "heat-pump-grant-checker",
+  "version": "2.0.0",
+  "description": "Complete heat pump eligibility checker and lead generation website - Vercel optimized",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "heat-pump",
+    "lead-generation",
+    "affiliate",
+    "boiler-upgrade-scheme",
+    "vercel"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/kv": "^1.0.1"
+  },
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}

@@ -2,30 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
-      "use": "@vercel/node"
-    },
-    {
       "src": "index.html",
       "use": "@vercel/static"
     },
     {
-      "src": "admin.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "style.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "script.js",
-      "use": "@vercel/static"
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server.js"
+      "dest": "/api/$1"
     },
     {
       "src": "/admin",
@@ -40,12 +28,19 @@
       "dest": "/script.js"
     },
     {
-      "src": "/",
-      "dest": "/index.html"
+      "src": "/admin-style.css",
+      "dest": "/admin-style.css"
     },
     {
-      "src": "/(.*)",
-      "dest": "/server.js"
+      "src": "/admin-script.js",
+      "dest": "/admin-script.js"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
     }
-  ]
+  ],
+  "env": {
+    "NODE_VERSION": "18.x"
+  }
 }

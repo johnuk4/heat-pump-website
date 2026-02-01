@@ -137,18 +137,12 @@ function loadQuestion() {
 }
 
 function selectOption(questionId, value, button) {
-    // Remove selected class from all buttons
     button.parentElement.querySelectorAll('.option-button').forEach(btn => {
         btn.classList.remove('selected');
     });
     
-    // Add selected class to clicked button
     button.classList.add('selected');
-    
-    // Store answer
     quizAnswers[questionId] = value;
-    
-    // Enable next button
     document.getElementById('nextBtn').disabled = false;
 }
 
@@ -170,7 +164,6 @@ function previousQuestion() {
 }
 
 function showResults() {
-    // Determine eligibility
     const isEligible = checkEligibility();
     
     document.getElementById('quizSection').style.display = 'none';
@@ -193,17 +186,14 @@ function showResults() {
 }
 
 function checkEligibility() {
-    // Check location (England or Wales)
     if (!['england', 'wales'].includes(quizAnswers[1])) {
         return false;
     }
     
-    // Check ownership
     if (quizAnswers[2] === 'no') {
         return false;
     }
     
-    // Check heating system (not already heat pump)
     if (quizAnswers[3] === 'heat-pump') {
         return false;
     }
@@ -219,7 +209,11 @@ document.addEventListener('DOMContentLoaded', function() {
         leadForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Get form data
+            const submitButton = leadForm.querySelector('.submit-button');
+            const originalText = submitButton.innerHTML;
+            submitButton.innerHTML = 'Submitting...';
+            submitButton.disabled = true;
+            
             const formData = {
                 firstName: document.getElementById('firstName').value,
                 lastName: document.getElementById('lastName').value,
@@ -233,7 +227,6 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             try {
-                // Submit to backend API
                 const response = await fetch('/api/submit-lead', {
                     method: 'POST',
                     headers: {
@@ -242,13 +235,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     body: JSON.stringify(formData)
                 });
                 
-                if (response.ok) {
-                    // Show thank you page
+                const data = await response.json();
+                
+                if (response.ok && data.success) {
                     document.getElementById('resultsSection').style.display = 'none';
                     document.getElementById('thankYouSection').style.display = 'block';
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                     
-                    // Track conversion (you can add Google Analytics, Facebook Pixel, etc. here)
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'conversion', {
                             'event_category': 'Lead',
@@ -256,26 +249,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         });
                     }
                 } else {
-                    alert('There was an error submitting your information. Please try again.');
+                    alert(data.error || 'There was an error submitting your information. Please try again.');
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
                 }
             } catch (error) {
                 console.error('Error:', error);
                 alert('There was an error submitting your information. Please try again.');
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
             }
         });
     }
-});
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
 });

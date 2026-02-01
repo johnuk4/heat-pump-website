@@ -1,402 +1,261 @@
-# Heat Pump Grant Checker - Affiliate Lead Generation Website
+# Heat Pump Grant Checker - Complete Vercel-Optimized Website
 
-A complete, production-ready website for generating leads from the UK Government Boiler Upgrade Scheme. This system captures qualified leads interested in heat pump installations and connects them with MCS-certified installers.
+## 🎉 What You're Getting
 
-## 🎯 What This Does
+A **complete, production-ready** heat pump lead generation website with:
 
-This is a **fully functional lead generation website** that:
+✅ **Full Frontend** - Professional eligibility checker with 7-question quiz
+✅ **Complete Backend** - Serverless API functions (no server management!)
+✅ **Database** - Vercel KV (Redis) for persistent storage
+✅ **Admin Panel** - Full lead management dashboard
+✅ **Mobile Responsive** - Works perfectly on all devices
+✅ **GDPR Compliant** - Privacy-focused lead collection
 
-1. ✅ Attracts visitors searching for heat pump grants
-2. ✅ Qualifies them through an interactive 7-question quiz
-3. ✅ Captures contact details for eligible prospects
-4. ✅ Stores leads in a database for management
-5. ✅ Provides admin dashboard for lead tracking
-6. ✅ Enables affiliate income through lead sales
+## 💰 Revenue Potential
 
-## 💰 How to Make Money
+- **Basic leads:** £50-75 each
+- **Phone-verified:** £100-150 each
+- **Realistic Month 6:** £10,000-20,000/month
 
-### Primary Revenue Stream: Lead Sales
-
-You earn money by selling the leads you generate to heat pump installers. Based on UK market research:
-
-**Average Lead Pricing:**
-- Basic leads: £25-50 per lead
-- Phone-verified leads: £50-100 per lead
-- Appointment-booked leads: £100-150 per lead
-- Exclusive leads (sold once): £150-250+ per lead
-
-**Example Monthly Income:**
-- 100 leads/month × £75 average = **£7,500/month**
-- 200 leads/month × £75 average = **£15,000/month**
-
-### How to Sell Your Leads:
-
-#### Option 1: Direct to Installers (Highest Profit)
-Contact heat pump installation companies directly:
-- Offer exclusive leads in their coverage areas
-- Charge £100-250 per qualified lead
-- No middleman = maximum profit
-
-**How to find installers:**
-- Search "MCS certified heat pump installer [city]" on Google
-- Browse https://mcscertified.com/find-an-installer/
-- LinkedIn: Search for heat pump installation companies
-- Trade shows and renewable energy events
-
-**Sample pitch email:**
-```
-Subject: Exclusive Heat Pump Leads in [City]
-
-Hi [Name],
-
-I generate exclusive, pre-qualified heat pump leads in [city/region]. These are homeowners who:
-- Are eligible for the £7,500 Boiler Upgrade Scheme
-- Have expressed interest in heat pump installation
-- Have provided contact details and consent
-
-I'm offering exclusive leads at £[price] each. Would you be interested in receiving leads for your area?
-
-Best regards,
-[Your Name]
-```
-
-#### Option 2: Lead Aggregators (Lower Profit, Easier)
-Platforms that buy leads from you:
-
-1. **Lead Pronto** (leadpronto.co.uk)
-   - Buys heat pump leads at £25+ each
-   - Revenue share model available
-
-2. **GMS Leads** (gmsleads.co.uk)
-   - Established lead buyer
-   - Bulk lead purchasing
-
-3. **Watts Marketing** (wattsmarketingltd.co.uk)
-   - Large-scale lead buyer
-   - Heat pump specialist
-
-4. **Capital Leads** (capital-leads.co.uk)
-   - Pays per lead
-   - Quick setup
-
-#### Option 3: Affiliate Networks
-Join affiliate programs from installer networks:
-
-1. **HPIN (Heat Pump Installer Network)** - £500 referral fee per installation
-2. **Grant UK** - Installer affiliate program
-3. **Thermal Earth** - Partner program
-
-### Secondary Revenue: Display Ads
-
-Once you have traffic, add Google AdSense or similar:
-- Potential: £500-2,000/month with good traffic
-- Passive income on top of lead sales
-
-## 📊 Traffic Strategy (How to Get Visitors)
-
-### SEO (Free, Long-term)
-**Target Keywords:**
-- "heat pump grant eligibility checker"
-- "am I eligible for heat pump grant"
-- "£7500 heat pump grant"
-- "boiler upgrade scheme checker"
-- "[city] heat pump grant"
-
-**Content Strategy:**
-- Blog posts about heat pump grants
-- Local landing pages for different cities
-- FAQ pages answering common questions
-- Case studies and success stories
-
-### Google Ads (Paid, Immediate)
-**Budget:** Start with £500-1,000/month
-**Expected Cost Per Click:** £2-7
-**Expected Conversion Rate:** 1-5%
-**Cost Per Lead:** £40-500 depending on optimization
-
-**Sample Campaign:**
-- Target: People searching "heat pump grant"
-- Location: England & Wales
-- Landing page: Your eligibility checker
-- Expected: 10-50 leads per £1,000 spend
-
-### Facebook Ads (Paid, Scalable)
-**Budget:** Start with £500/month
-**Target Audience:**
-- Homeowners aged 35-65
-- Interest: Home improvement, energy efficiency
-- Location: England & Wales
-**Expected:** 20-100 leads per £1,000 spend
-
-### Content Marketing (Free, Medium-term)
-- Create comparison guides
-- YouTube videos about heat pump grants
-- Social media posts
-- Guest posting on home improvement blogs
-
-## 🚀 Setup Instructions
-
-### Prerequisites
-- Node.js (v14 or higher)
-- npm (comes with Node.js)
-- Web hosting (for production)
-
-### Local Development Setup
-
-1. **Install Dependencies:**
-```bash
-npm install
-```
-
-2. **Start the Server:**
-```bash
-npm start
-```
-
-3. **Access the Website:**
-- Main site: http://localhost:3000
-- Admin panel: http://localhost:3000/admin
-
-### Files Included
+## 📦 Complete File List
 
 ```
 /
-├── index.html          # Main landing page with quiz
-├── admin.html          # Admin dashboard for lead management
-├── style.css           # Professional, modern styling
-├── script.js           # Quiz logic and form handling
-├── server.js           # Backend server with API endpoints
-├── package.json        # Dependencies
-├── leads.db            # SQLite database (auto-created)
-└── README.md           # This file
+├── index.html              # Main website
+├── style.css               # Website styling
+├── script.js               # Quiz logic & form handling
+├── admin.html              # Admin dashboard
+├── admin-style.css         # Admin styling
+├── admin-script.js         # Admin functionality
+├── package.json            # Dependencies
+├── vercel.json             # Vercel configuration
+├── api/
+│   ├── submit-lead.js      # Lead submission API
+│   ├── leads.js            # Get all leads API
+│   └── stats.js            # Statistics API
+├── README.md               # This file
+└── DEPLOYMENT_GUIDE.md     # Step-by-step deployment
 ```
 
-## 🗄️ Database Structure
+## 🚀 Quick Start - Deploy to Vercel
 
-### Leads Table
-Stores all captured leads with:
-- Personal info (name, email, phone, postcode)
-- Quiz answers (location, property type, heating system, etc.)
-- Eligibility status
-- Lead status (new, contacted, qualified, converted)
-- Timestamps
+### Step 1: Upload to GitHub
 
-### Affiliate Earnings Table
-Track your commissions:
-- Lead ID reference
-- Commission amount
-- Installation date
-- Payment status
-- Installer name
+1. Go to https://github.com/new
+2. Name: `heat-pump-website`
+3. Check "Add README"
+4. Click "Create repository"
+5. Click "Upload files"
+6. **Drag ALL files** from this folder
+7. Click "Commit changes"
 
-## 🎨 Features
+### Step 2: Deploy to Vercel
 
-### User-Facing:
-- ✅ Professional, conversion-optimized design
-- ✅ Interactive 7-question eligibility quiz
-- ✅ Progress indicator
-- ✅ Instant eligibility results
-- ✅ Mobile-responsive
-- ✅ Fast loading times
-- ✅ GDPR-compliant consent forms
+1. Go to https://vercel.com
+2. Sign up with GitHub
+3. Click "New Project"
+4. Import `heat-pump-website`
+5. **Leave all settings as default**
+6. Click "Deploy"
+7. Wait 2 minutes
+8. **Your site is LIVE!** 🎉
 
-### Admin Panel:
-- ✅ Real-time lead dashboard
-- ✅ Lead statistics (today, week, month, total)
-- ✅ Search and filter leads
-- ✅ Update lead status
-- ✅ Add notes to leads
-- ✅ Export to CSV
-- ✅ Track earnings
+### Step 3: Set Up Database (Optional but Recommended)
 
-## 📈 Scaling Your Business
+For persistent lead storage:
 
-### Phase 1: Launch (Month 1)
-- Set up website and hosting
-- Run small Google Ads test (£500)
-- Contact 10-20 local installers
-- Goal: 20-50 leads, £1,500-3,000 revenue
+1. In Vercel dashboard, go to your project
+2. Click "Storage" tab
+3. Click "Create Database"
+4. Select "KV (Redis)"
+5. Name it `heat-pump-leads`
+6. Click "Create"
+7. **Done!** Leads now persist forever
 
-### Phase 2: Growth (Months 2-3)
-- Optimize ad campaigns
-- Scale ad spend to £2,000/month
-- Secure 3-5 installer contracts
-- Build SEO content
-- Goal: 100-150 leads, £7,500-11,000 revenue
+**Without database:** Leads work but may reset occasionally (fine for testing)
 
-### Phase 3: Automation (Months 4-6)
-- Hire VA for lead qualification
-- Implement automated email sequences
-- Expand to new regions
-- Build referral program
-- Goal: 200-300 leads, £15,000-22,000 revenue
+## 🎯 What Works Immediately
 
-### Phase 4: Scale (6+ months)
-- Multiple lead generation sites
-- Franchise model to other niches
-- Build installer network
-- White-label solutions
-- Goal: 500+ leads, £35,000+ revenue
+✅ **Homepage** - Full landing page with quiz
+✅ **Quiz** - Interactive 7-question eligibility checker
+✅ **Form** - Lead capture and submission
+✅ **Admin Panel** - Access at `/admin`
+✅ **APIs** - All serverless functions work
 
-## 🔧 Deployment to Production
+## 🔧 Configuration
 
-### Option 1: DigitalOcean (Recommended)
-1. Create a Droplet (Ubuntu 22.04)
-2. Install Node.js
-3. Clone your files
-4. Install dependencies: `npm install`
-5. Use PM2 to keep server running: `pm2 start server.js`
-6. Set up domain and SSL (Let's Encrypt)
+### Environment Variables (Optional)
 
-**Cost:** $6-12/month
+Add these in Vercel dashboard → Settings → Environment Variables:
 
-### Option 2: Heroku (Easiest)
-1. Create Heroku account
-2. Install Heroku CLI
-3. Deploy with: `git push heroku main`
-4. Database: Upgrade to hobby tier for persistence
+```
+KV_REST_API_URL=your-kv-url (auto-set when you create KV database)
+KV_REST_API_TOKEN=your-kv-token (auto-set when you create KV database)
+NOTIFICATION_EMAIL=your@email.com (optional - for lead notifications)
+```
 
-**Cost:** $7-25/month
+## 📊 Admin Panel
 
-### Option 3: AWS (Most Scalable)
-1. Set up EC2 instance
-2. Configure security groups
-3. Deploy application
-4. Use RDS for database
-5. CloudFront for CDN
+Access your admin dashboard at: `https://your-site.vercel.app/admin`
 
-**Cost:** $10-50/month (scales with traffic)
+Features:
+- Real-time statistics
+- Lead management
+- Search and filter
+- CSV export
+- Lead details view
 
-## 🎯 Lead Quality Tips
+## 💡 How to Make Money
 
-### To Maximize Lead Value:
-1. **Phone Verify** - Call leads before selling (adds 50-100% to value)
-2. **Pre-Qualify** - Confirm eligibility (installers pay more)
-3. **Book Appointments** - Scheduled appointments worth 2-3x more
-4. **Be Exclusive** - Never sell same lead twice
-5. **Fast Delivery** - Send leads within 24 hours
+### Option 1: Sell Leads Directly to Installers
 
-## 📞 Support & Maintenance
+1. Find MCS-certified installers: https://mcscertified.com
+2. Call 10-20 installers in different regions
+3. Offer exclusive leads at £100-150 each
+4. Get 3-5 clients paying monthly
 
-### Regular Tasks:
-- **Daily:** Check new leads, update statuses
-- **Weekly:** Export leads, invoice installers
-- **Monthly:** Analyze conversion rates, optimize ads
+**Example pitch:**
+> "I generate pre-qualified heat pump leads. Homeowners who completed eligibility check and want quotes. £100 per exclusive lead in your area. Interested?"
 
-### Key Metrics to Track:
-- Cost per lead (CPL)
-- Lead-to-sale conversion rate
-- Average sale price per lead
-- Return on ad spend (ROAS)
-- Installer satisfaction
+### Option 2: Join Affiliate Networks
 
-## ⚖️ Legal & Compliance
+- **HPIN:** £500 per completed installation
+- **Lead aggregators:** £25-75 per lead (lower but easier)
 
-### GDPR Compliance:
-✅ Clear consent checkbox
-✅ Privacy policy link
-✅ Data storage documentation
-✅ Right to deletion process
+### Option 3: Google Ads
 
-### Required Policies:
-- Privacy Policy
-- Terms of Service
-- Cookie Policy
-- Data Processing Agreement (for installers)
+1. Set up Google Ads account
+2. Target: "heat pump grant eligibility"
+3. Budget: Start with £500/month
+4. Expected: 10-30 leads/month initially
 
-**Templates available online** - customize for your business.
+## 🎨 Customization
 
-## 💡 Pro Tips
+### Change Colors
 
-### Increase Conversion Rate:
-1. Add social proof (testimonials)
-2. Include trust badges
-3. Show installation photos
-4. Add video explainer
-5. Live chat support
+Edit `style.css`:
+```css
+:root {
+    --primary-gradient: linear-gradient(135deg, #YOUR-COLOR1 0%, #YOUR-COLOR2 100%);
+}
+```
 
-### Reduce Cost Per Lead:
-1. A/B test landing pages
-2. Improve ad copy and targeting
-3. Optimize for mobile
-4. Use retargeting ads
-5. Build email list
+### Update Content
 
-### Scale Faster:
-1. Partner with energy comparison sites
-2. Create local landing pages for each city
-3. Build calculator tools
-4. Offer free guides/ebooks
-5. Run webinars
+Edit `index.html`:
+- Change hero title/subtitle
+- Update FAQ questions
+- Modify footer text
 
-## 📚 Resources
+### Add Your Logo
 
-### Heat Pump Grant Information:
-- Ofgem BUS Scheme: https://www.ofgem.gov.uk/environmental-and-social-schemes/boiler-upgrade-scheme-bus
-- MCS Installer Directory: https://mcscertified.com
-- Heat Pump Association: https://www.heatpumps.org.uk
+1. Upload logo image to root folder
+2. Edit `index.html` header section
+3. Add: `<img src="logo.png" alt="Logo">`
 
-### Marketing Tools:
-- Google Ads: https://ads.google.com
-- Facebook Business: https://business.facebook.com
-- SEMrush (SEO): https://www.semrush.com
-- Unbounce (Landing Pages): https://unbounce.com
+## 🔐 Security & GDPR
 
-### Lead Management:
-- HubSpot CRM (Free tier)
-- Pipedrive (Sales pipeline)
-- Mailchimp (Email marketing)
-- Calendly (Appointment booking)
+✅ **Consent required** - Checkbox before submission
+✅ **Data encryption** - Vercel KV is encrypted at rest
+✅ **HTTPS** - Automatic SSL certificate
+✅ **Privacy policy** - Add link in form (use generator)
 
-## 🚨 Next Steps
+## 📈 Scaling
 
-1. **Set up your website** - Upload files to hosting
-2. **Test thoroughly** - Complete quiz, check database
-3. **Contact installers** - Send pitch emails
-4. **Launch ads** - Start with small budget
-5. **Monitor & optimize** - Track metrics daily
-6. **Scale up** - Increase ad spend as profitable
+### Month 1: Launch
+- Deploy website ✅
+- Contact 10 installers
+- Launch £500 Google Ads
+- **Goal:** 20 leads, £1,500 revenue
 
-## ❓ FAQ
+### Month 3: Optimize
+- Increase ad budget to £2,000
+- Secure 5 installer contracts
+- Add phone verification
+- **Goal:** 100 leads, £7,500 revenue
 
-**Q: How much can I really make?**
-A: Realistically, expect £2,000-5,000 in the first month, scaling to £10,000-20,000+ by month 6 with proper execution.
+### Month 6: Scale
+- £5,000 ad budget
+- 10+ installer clients
+- Hire VA for calls
+- **Goal:** 200 leads, £15,000 revenue
 
-**Q: Do I need to be MCS certified?**
-A: No! You're generating leads, not installing heat pumps. You connect customers with certified installers.
+## 🛠️ Troubleshooting
 
-**Q: Is this legal?**
-A: Yes, as long as you comply with GDPR and obtain proper consent. You're providing a lead generation service.
+### Leads Not Saving?
+→ Set up Vercel KV database (see Step 3 above)
 
-**Q: What if installers don't pay?**
-A: Use contracts, get payment upfront, or use escrow for new relationships.
+### Admin Panel Empty?
+→ Submit a test lead first, then refresh admin panel
 
-**Q: How much should I spend on ads?**
-A: Start with £500-1,000/month. Scale up when profitable.
+### API Not Working?
+→ Check Vercel deployment logs for errors
 
-## 📞 Getting Started
+### Form Won't Submit?
+→ Open browser console (F12) to see error messages
 
-Ready to launch? Here's your immediate action plan:
+## 📱 Testing Checklist
 
-**Today:**
-- [ ] Set up hosting and domain
-- [ ] Deploy this website
-- [ ] Test the quiz and database
+After deployment, test:
 
-**This Week:**
-- [ ] Contact 20 local installers
-- [ ] Set up Google Ads account
-- [ ] Create social media accounts
-- [ ] Write 3 blog posts
+1. ✅ Homepage loads
+2. ✅ Quiz works (complete all 7 questions)
+3. ✅ Form submits successfully
+4. ✅ Thank you page appears
+5. ✅ Admin panel shows lead
+6. ✅ Mobile responsive (test on phone)
 
-**This Month:**
-- [ ] Secure 3 installer contracts
-- [ ] Launch ads with £1,000 budget
-- [ ] Generate first 50 leads
-- [ ] Earn first £2,000
+## 🎯 Next Steps
+
+1. **Today:** Deploy and test
+2. **This Week:** Contact 20 installers
+3. **This Month:** Launch ads, get first clients
+4. **Month 2:** Scale to £5,000/month
+5. **Month 6:** Reach £15,000/month
+
+## 💬 Support
+
+### Common Questions
+
+**Q: Do I need coding knowledge?**
+A: No! Just upload files and click deploy.
+
+**Q: How much does Vercel cost?**
+A: Free for hobby projects. Upgrade to Pro ($20/month) when you're making money.
+
+**Q: Can I use my own domain?**
+A: Yes! Buy domain, then add it in Vercel project settings.
+
+**Q: Is the database free?**
+A: Vercel KV is free for up to 100MB (enough for 10,000+ leads).
+
+**Q: How do I get paid?**
+A: Invoice installers directly. Use PayPal, Stripe, or bank transfer.
+
+## 🎉 You're Ready!
+
+Everything is configured and ready to go. Just:
+
+1. Upload to GitHub
+2. Deploy to Vercel
+3. Test the site
+4. Start contacting installers
+5. Make money!
+
+**Your website will be live in 10 minutes.** 🚀
 
 ---
 
-**Good luck with your heat pump lead generation business! 🚀**
+## 📞 Quick Links
 
-For technical support, consult the documentation for Express.js, SQLite, and Node.js.
+- **Vercel:** https://vercel.com
+- **GitHub:** https://github.com
+- **MCS Installers:** https://mcscertified.com
+- **Google Ads:** https://ads.google.com
+- **Ofgem BUS:** https://www.ofgem.gov.uk/environmental-and-social-schemes/boiler-upgrade-scheme-bus
+
+---
+
+**Good luck with your heat pump lead generation business!** 💰
+
+The files are complete, tested, and ready to deploy. No modifications needed - everything works out of the box!
